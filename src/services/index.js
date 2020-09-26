@@ -1,0 +1,7 @@
+export * from './beneficio.service'
+export * from './cartao.service'
+export * from './emprestimo.service'
+export * from './endereco.service'
+export * from './pessoa.service'
+export * from './telefone.service'
+export * from './user.service'

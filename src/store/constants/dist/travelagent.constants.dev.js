@@ -1,0 +1,17 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.travelagentConstants = void 0;
+var travelagentConstants = {
+  TRAVELAGENT_GETALL: 'TRAVELAGENT_GETALL',
+  TRAVELAGENT_GET: 'TRAVELAGENT_GET',
+  TRAVELAGENT_CREATE: 'TRAVELAGENT_CREATE',
+  TRAVELAGENT_UPDATE: 'TRAVELAGENT_UPDATE',
+  TRAVELAGENT_REMOVE: 'TRAVELAGENT_REMOVE',
+  TRAVELAGENT_LOADING: 'TRAVELAGENT_LOADING',
+  TRAVELAGENT_FORM_SHOW: 'TRAVELAGENT_FORM_SHOW',
+  TRAVELAGENT_SUBMIT: 'TRAVELAGENT_SUBMIT'
+};
+exports.travelagentConstants = travelagentConstants;

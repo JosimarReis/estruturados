@@ -1,0 +1,18 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.destinationConstants = void 0;
+var destinationConstants = {
+  DESTINATION_GETALL: 'DESTINATION_GETALL',
+  DESTINATION_GET: 'DESTINATION_GET',
+  DESTINATION_CREATE: 'DESTINATION_CREATE',
+  DESTINATION_UPDATE: 'DESTINATION_UPDATE',
+  DESTINATION_REMOVE: 'DESTINATION_REMOVE',
+  DESTINATION_LOADING: 'DESTINATION_LOADING',
+  DESTINATION_FORM_SHOW: 'DESTINATION_FORM_SHOW',
+  DESTINATION_PASS: 'DESTINATION_PASS',
+  DESTINATION_SUBMIT: 'DESTINATION_SUBMIT'
+};
+exports.destinationConstants = destinationConstants;
