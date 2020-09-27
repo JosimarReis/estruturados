@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect, HashRouter } from "react-router-dom";
 import { isAuthenticated } from "./auth";
 import { history } from "./helpers";
 import Dashboard from './pages/Dashboard'
@@ -18,7 +18,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 
 const Routes = () => (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
         <Switch history={history}>
             <Route path="/login" component={SingIn} />
             <PrivateRoute path="/" component={Dashboard} />
