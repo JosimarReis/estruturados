@@ -1,6 +1,6 @@
 
 const dominio = (uri) => {
-    let ENV = 'prod'
+    let ENV = 'dev'
 
 
     let local = 'http://192.168.0.105:4320'

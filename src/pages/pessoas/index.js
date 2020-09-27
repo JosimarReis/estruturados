@@ -158,8 +158,10 @@ export default function Pessoas() {
     useEffect(() => {
         if (items.count)
             setTotal(items.count)
-        if (items.rows)
+        if (items.rows) {
             setPessoas(items.rows)
+            dispatch({ type: pessoaConstants.PESSOA_LOADING })
+        }
     }, [items])
 
     const handleChangePage = (event, newPage) => {
@@ -193,7 +195,6 @@ export default function Pessoas() {
         if (data.cpf === "") delete data.cpf
         else {
             let cpf = data.cpf.split('.').join('').split('-').join('')
-            console.log(cpf)
             dispatch({ type: pessoaConstants.PESSOA_LOADING })
             setPage(0)
             dispatch(pessoaActions.findPages({ ...filtro, cpf }))
@@ -248,7 +249,7 @@ export default function Pessoas() {
                                 <TableRow>
                                     <TableCell>Nome</TableCell>
                                     <TableCell>CPF</TableCell>
-                                    <TableCell>Emprestimos</TableCell>
+                                    <TableCell>Benefícios</TableCell>
                                     <TableCell align="right">Ações</TableCell>
                                 </TableRow>
                             </TableHead>
@@ -263,7 +264,7 @@ export default function Pessoas() {
                                         <TableRow key={row.id}>
                                             <TableCell>{row.nome}</TableCell>
                                             <TableCell>{row.cpf}</TableCell>
-                                            <TableCell>{}</TableCell>
+                                            <TableCell align="center">{row.beneficios && row.beneficios.length > 0 ? row.beneficios.length : 0}</TableCell>
                                             <TableCell align="right">
                                                 <ButtonGroup size="small" aria-label="small outlined button group">
                                                     <Button component={LinkRouter} to={`/pessoas/${row.id}`} title="Ver detalhes"><VisibilityIcon style={{ color: blue[350] }} /></Button>
