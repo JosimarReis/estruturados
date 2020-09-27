@@ -1,7 +1,7 @@
 {
   "name": "api-estruturados",
   "version": "0.1.0",
-  "homepage": "https://JosimarReis.github.io",
+  "homepage": "http://174.138.38.24/",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^0.1.0",
